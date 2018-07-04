@@ -1,3 +1,7 @@
+<?php
+use \App\Http\Controllers\Auth\SocialAuth;
+?>
+
 @extends('layouts.app')
 
 @section('content')
@@ -65,6 +69,14 @@
                                 <button type="submit" class="btn btn-primary">
                                     Register
                                 </button>
+                                <br>
+                                <br>
+                                <a class="btn btn-link" href="{{url('/social/auth/'.SocialAuth::FACEBOOK)}}">
+                                    <?= FA::x3('facebook-square');?>
+                                </a>
+                                <a class="btn btn-link" href="{{ url('/social/auth/'.SocialAuth::GITHUB)}}">
+                                    <?= FA::x3('github-square ');?>
+                                </a>
                             </div>
                         </div>
                     </form>

@@ -1,3 +1,7 @@
+<?php
+use \App\Http\Controllers\Auth\SocialAuth;
+?>
+
 @extends('layouts.app')
 
 @section('content')
@@ -56,6 +60,14 @@
 
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">
                                     Forgot Your Password?
+                                </a>
+                                <br>
+                                <br>
+                                <a class="btn btn-link" href="{{ url('/social/auth/'.SocialAuth::FACEBOOK) }}">
+                                    <?= FA::x3('facebook-square');?>
+                                </a>
+                                <a class="btn btn-link" href="{{ url('/social/auth/'.SocialAuth::GITHUB) }}">
+                                    <?= FA::x3('github-square ');?>
                                 </a>
                             </div>
                         </div>

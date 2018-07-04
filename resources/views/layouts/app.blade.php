@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <?=\Khill\Fontawesome\FontAwesome::css()?>
 
     <!-- Scripts -->
     <script>
