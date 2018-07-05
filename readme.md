@@ -5,7 +5,7 @@
 ### Установить зависимости проекта:
 PHP:
 ```
-composer update
+composer install
 ```
 JS:
 ```
