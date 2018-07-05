@@ -17,8 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/dashboard', 'HomeController@index');
 
-Route::get('/social/auth/{provider}', 'Auth\SocialAuth@redirectToProvider');
+Route::get('/social/auth/{provider}', 'Auth\SocialAuthController@redirectToProvider');
 
-Route::get('/social/auth/callback/{provider}', 'Auth\SocialAuth@handleProviderCallback');
+Route::get('/social/auth/callback/{provider}', 'Auth\SocialAuthController@handleProviderCallback');
+
+Route::get('/post/create', 'PostController@getCreatePost');

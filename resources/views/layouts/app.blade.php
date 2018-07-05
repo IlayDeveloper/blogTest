@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
+    <link href="/css/selectivity.css" rel="stylesheet">
     <?=\Khill\Fontawesome\FontAwesome::css()?>
 
     <!-- Scripts -->
@@ -84,5 +85,7 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script src="/js/selectivity.js"></script>
+
 </body>
 </html>

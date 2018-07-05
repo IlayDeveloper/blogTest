@@ -10,6 +10,9 @@
                 <div class="panel-body">
                     You are logged in!
                 </div>
+                <a class="btn btn-primary" href="{{ url('/post/create') }}">
+                    Create new post
+                </a>
             </div>
         </div>
     </div>

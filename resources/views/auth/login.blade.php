@@ -1,5 +1,5 @@
 <?php
-use \App\Http\Controllers\Auth\SocialAuth;
+use \App\Http\Controllers\Auth\SocialAuthController;
 ?>
 
 @extends('layouts.app')
@@ -63,10 +63,10 @@ use \App\Http\Controllers\Auth\SocialAuth;
                                 </a>
                                 <br>
                                 <br>
-                                <a class="btn btn-link" href="{{ url('/social/auth/'.SocialAuth::FACEBOOK) }}">
+                                <a class="btn btn-link" href="{{ url('/social/auth/'.SocialAuthController::FACEBOOK) }}">
                                     <?= FA::x3('facebook-square');?>
                                 </a>
-                                <a class="btn btn-link" href="{{ url('/social/auth/'.SocialAuth::GITHUB) }}">
+                                <a class="btn btn-link" href="{{ url('/social/auth/'.SocialAuthController::GITHUB) }}">
                                     <?= FA::x3('github-square ');?>
                                 </a>
                             </div>

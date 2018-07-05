@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->string('title')->unique();
             $table->string('content');
+            $table->string('photo');
             $table->integer('likes')->unsigned();
             $table->timestamps();
         });

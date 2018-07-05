@@ -13,7 +13,10 @@ require('laravel-elixir-vue-2');
  |
  */
 
-elixir((mix) => {
+elixir (function(mix) {
     mix.sass('app.scss')
-       .webpack('app.js');
+        .webpack('app.js')
+        .webpack('selectivity/selectivity.js')
+        .styles('./node_modules/selectivity/styles/selectivity.css',
+        'public/css/selectivity.css');
 });

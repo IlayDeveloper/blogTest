@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 use Laravel\Socialite\Facades\Socialite;
 
-class SocialAuth extends Controller
+class SocialAuthController extends Controller
 {
     const GITHUB = 'github';
     const FACEBOOK = 'facebook';
@@ -22,10 +22,10 @@ class SocialAuth extends Controller
     {
         switch ($provider)
         {
-            case SocialAuth::FACEBOOK:
-                return Socialite::driver(SocialAuth::FACEBOOK)->redirect();
-            case SocialAuth::GITHUB:
-                return Socialite::driver(SocialAuth::GITHUB)->redirect();
+            case SocialAuthController::FACEBOOK:
+                return Socialite::driver(SocialAuthController::FACEBOOK)->redirect();
+            case SocialAuthController::GITHUB:
+                return Socialite::driver(SocialAuthController::GITHUB)->redirect();
         }
     }
 
@@ -37,10 +37,10 @@ class SocialAuth extends Controller
     {
         switch ($provider)
         {
-            case SocialAuth::FACEBOOK:
+            case SocialAuthController::FACEBOOK:
                 $data = Socialite::driver('facebook')->user();
                 break;
-            case SocialAuth::GITHUB:
+            case SocialAuthController::GITHUB:
                 $data = Socialite::driver('github')->user();
                 break;
         }
@@ -59,13 +59,13 @@ class SocialAuth extends Controller
         if(! is_null($user))
         {
             Auth::login($user);
-            return redirect('/home');
+            return redirect('/dashboard');
         }
         else
         {
             if($this->registerNewUser($data))
             {
-                return redirect('/home');
+                return redirect('/dashboard');
             }
             return redirect('/register');
         }
