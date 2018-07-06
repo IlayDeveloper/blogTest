@@ -31,7 +31,7 @@
                                 <textarea id="content" type="content" class="form-control" name="content" value="{{ old('content') }}" required>
                                 </textarea>
                                 @if ($errors->has('content'))
-                                    <span class="help-block"">
+                                    <span class="help-block">
                                         <strong>{{ $errors->first('content') }}</strong>
                                     </span>
                                 @endif
@@ -41,15 +41,7 @@
                         <div class="form-group">
                             <label for="categories" class="col-md-4 control-label">Categories</label>
                             <div class="col-md-6">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Option 1</label>
-                                </div>
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="">Option 2</label>
-                                </div>
-                                <div class="checkbox disabled">
-                                    <label><input type="checkbox" value="" disabled>Option 3</label>
-                                </div>
+                                <input id="categories">
                             </div>
                         </div>
 
@@ -57,8 +49,7 @@
                             <label for="tags" class="col-md-4 control-label">Tags</label>
 
                             <div class="col-md-6">
-                                <span id="tags"  class="select3-input">
-                                </span>
+                                <input id="tags">
                             </div>
                         </div>
 

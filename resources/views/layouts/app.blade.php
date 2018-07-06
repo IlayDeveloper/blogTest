@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="/css/app.css" rel="stylesheet">
-    <link href="/css/selectivity.css" rel="stylesheet">
+    <link href="/libs/tagify/tagify.css" rel="stylesheet">
     <?=\Khill\Fontawesome\FontAwesome::css()?>
 
     <!-- Scripts -->
@@ -85,7 +85,9 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
-    <script src="/js/selectivity.js"></script>
+    {{--<script src="/libs/tagify/jQuery.tagify.min.js"></script>--}}
+    <script src="/libs/tagify/lib.tagify.min.js"></script>
+    <script src="/libs/tagify/tagify.js"></script>
 
 </body>
 </html>
